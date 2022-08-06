@@ -6,11 +6,11 @@
 /*   By: vscode <vscode@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 15:06:25 by vscode            #+#    #+#             */
-/*   Updated: 2022/08/05 12:38:15 by vscode           ###   ########.fr       */
+/*   Updated: 2022/08/06 07:50:25 by vscode           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/corsair.h"
+#include "../include/corsair.h"
 
 size_t ft_strlen(const unsigned char *str)
 {

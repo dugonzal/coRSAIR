@@ -6,11 +6,11 @@
 /*   By: vscode <vscode@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 12:34:01 by vscode            #+#    #+#             */
-/*   Updated: 2022/08/05 12:55:11 by vscode           ###   ########.fr       */
+/*   Updated: 2022/08/06 07:51:07 by vscode           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/corsair.h"
+#include "../include/corsair.h"
 
 
 void rsa_gen_keys(void)
@@ -35,11 +35,11 @@ void rsa_gen_keys(void)
         goto cleanup;
     }
     // write rsa private key to file
-    bio_private = BIO_new_file("keys/private.key", "w+");
+    bio_private = BIO_new_file("../keys/private.key", "w+");
     ret = PEM_write_bio_RSAPrivateKey(bio_private, rsa, NULL, NULL, 0, NULL, NULL);
     BIO_flush(bio_private);
     // write rsa public key to file
-    bio_public = BIO_new_file("keys/public.key", "w+");
+    bio_public = BIO_new_file("../keys/public.key", "w+");
     ret = PEM_write_bio_RSAPublicKey(bio_public, rsa);
 	// imprimir modulo y exponente de la clave publica
 

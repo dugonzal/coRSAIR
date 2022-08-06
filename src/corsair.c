@@ -6,11 +6,11 @@
 /*   By: vscode <vscode@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 09:52:02 by dugonzal          #+#    #+#             */
-/*   Updated: 2022/08/05 17:11:09 by vscode           ###   ########.fr       */
+/*   Updated: 2022/08/06 07:52:01 by vscode           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/corsair.h"
+#include "../include/corsair.h"
 
 /*
 1. Un cliente (por ejemplo, un navegador) envía su clave pública al servidor y solicita algunos datos.
@@ -29,7 +29,7 @@ int	main(void)
 	// leer clave publica de archivo y guardarla en una estructura RSA
 	RSA *rsa = NULL; // inicializar estructura RSA en NULL
 	BIO *bio_public = NULL; // inicializar estructura BIO en NULL para leer clave publica de archivo
-	bio_public = BIO_new_file("keys/public.key", "r"); // abrir archivo para leer clave publica de archivo
+	bio_public = BIO_new_file("../keys/public.key", "r"); // abrir archivo para leer clave publica de archivo
 	if(bio_public == NULL) 	// si no se pudo abrir archivo para leer clave publica de archivo
 	{
 		printf("\nError opening public.key file\n");
@@ -72,7 +72,7 @@ int	main(void)
 	// leer clave privada de archivo y guardarla en una estructura RSA
 	RSA *rsa_private = NULL;
 	BIO *bio_private = NULL;
-	bio_private = BIO_new_file("keys/private.key", "r");
+	bio_private = BIO_new_file("../keys/private.key", "r");
 	if(bio_private == NULL)
 	{
 		printf("Error opening private key file\n");
