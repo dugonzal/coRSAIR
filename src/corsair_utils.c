@@ -6,7 +6,7 @@
 /*   By: vscode <vscode@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 15:06:25 by vscode            #+#    #+#             */
-/*   Updated: 2022/08/06 07:50:25 by vscode           ###   ########.fr       */
+/*   Updated: 2022/08/06 09:24:59 by vscode           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ size_t ft_strlen(const unsigned char *str)
 	size_t i;
 
 	i = 0;
-	while (str[i])
-		i++;
+	while (str[i++]);
 	return (i);
 }
