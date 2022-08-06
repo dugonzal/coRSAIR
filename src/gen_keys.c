@@ -6,7 +6,7 @@
 /*   By: vscode <vscode@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 12:34:01 by vscode            #+#    #+#             */
-/*   Updated: 2022/08/06 07:51:07 by vscode           ###   ########.fr       */
+/*   Updated: 2022/08/06 07:54:13 by vscode           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ void rsa_gen_keys(void)
     // write rsa public key to file
     bio_public = BIO_new_file("../keys/public.key", "w+");
     ret = PEM_write_bio_RSAPublicKey(bio_public, rsa);
-	// imprimir modulo y exponente de la clave publica
-
     if(ret != 1)
 	{
         goto cleanup;

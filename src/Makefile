@@ -6,11 +6,11 @@
 #    By: vscode <vscode@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/13 09:31:18 by dugonzal          #+#    #+#              #
-#    Updated: 2022/08/05 12:38:00 by vscode           ###   ########.fr        #
+#    Updated: 2022/08/06 08:02:37 by vscode           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = corsair.a
+NAME = coRSAir
 
 SRC = corsair.c corsair_utils.c gen_keys.c
 
