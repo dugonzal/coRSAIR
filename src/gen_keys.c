@@ -6,7 +6,7 @@
 /*   By: vscode <vscode@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 12:34:01 by vscode            #+#    #+#             */
-/*   Updated: 2022/08/06 07:54:13 by vscode           ###   ########.fr       */
+/*   Updated: 2022/08/06 09:56:39 by vscode           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void rsa_gen_keys(void)
     int              bits = 1024;
 
     bignum = BN_new();
+    // rsa->n, rsa->e, rsa->d, rsa->p, rsa->q rsa->dmp1, rsa->dmq1, rsa->iqmp rsa_new() calculates n, e, d, p, q, dmp1, dmq1, iqmp from the public and private keys.
     ret = BN_set_word(bignum,RSA_F4);
     if(ret != 1)
 	{
@@ -41,6 +42,9 @@ void rsa_gen_keys(void)
     // write rsa public key to file
     bio_public = BIO_new_file("../keys/public.key", "w+");
     ret = PEM_write_bio_RSAPublicKey(bio_public, rsa);
+    // imprimir modulo y exponente de la clave publica
+    //BIO_printf(bio_public, "Modulo: %s\n", BN_bn2hex(rsa->n));
+    //BIO_printf(bio_public, "Exponente: %s\n", BN_bn2hex(rsa->e));
     if(ret != 1)
 	{
         goto cleanup;
